@@ -1,0 +1,7 @@
+##
+	- for PRODUCT, capitalize everything before the validation. For example, "Cabometyx" should not give us a not found error if "CABOMETYX" is in our product spreadsheet
+	- For "COUNTRY", is the value is "USA", convert to "US" before validation
+	- For "RECIPIENTIDENTIFIERCOUNTRY", is the value is "USA", convert to "US" before validation
+	- "VENUECITY" "VENUEPROVINCE" "VENUECOUNTRY" "VENUEPOSTALCODE" cannot be "Virtual" or "VIRTUAL". If it is, then map the columns as follows - VENUECITY: CITY, VENUEPROVINCE: PROVINCE, VENUEPOSTALCODE: POSTALCODE, VENUECOUNTRY: COUNTRY
+	- If "PYMTCONTEXTINFO" is blank, we concatenate "COMPANYEVENTID, TRANSACTIONDATE, ENGAGEMENTNAME" separated by a "-"
+  - If "COMMENTS" is blank, then take the original file name that is read in (check if we have code already where this has been read in), and put that as the value. 
